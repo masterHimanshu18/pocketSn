@@ -26,6 +26,9 @@
   }
   
   @import "admin-styles/mixin";
+
+  @import "_home.scss";
+  @import "_cart.scss";
   
   @import "admin-styles/dashboard";
   @import "admin-styles/products";
@@ -33,6 +36,87 @@
   @import "admin-styles/dashboardapp";
   @import "admin-styles/mediaquery";
   
+
+
+
+.header {
+    @include flex(row, flex-end, stretch, 1.2rem);
+    background-color: rgb(108, 200, 236);
+    padding: 1rem;
+    a {
+        color: rgb(0, 0, 0);
+        letter-spacing: 2px;
+        font-size: 1.2rem;
+
+        &:hover {
+            color: rgb(2, 117, 248);
+        }
+    }
+
+    button {
+        border: none;
+        font-size: 1.2rem;
+        cursor: pointer;
+        background-color: transparent;
+        &:hover{
+            color: rgb(2, 117, 248);
+        }
+
+    }
+
+    dialog {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        width: 100px;
+        position: absolute;
+        left: calc(100% - 100px);
+        top: 8%;
+        > div {
+            @include flex(column, flex-start, center, 0.25rem);
+        }
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   .admin-container {
     @include grid(1fr 4fr, 2rem);
     height: 100vh;
