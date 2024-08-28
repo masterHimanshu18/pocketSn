@@ -3,7 +3,7 @@ import { useState } from "react";
 import { FaSearch, FaShoppingBag, FaSignInAlt, FaSignOutAlt, FaUser } from 'react-icons/fa';
 
 const user = {
-    _id : "1", role : 'admin'
+    _id : "", role : ''
 };
 
 const Header = () => {
@@ -15,7 +15,7 @@ const Header = () => {
   };
   return (
     <nav className="header">
-        <Link onClick={() => setIsOpen(false)} to={"/"}>Home</Link>
+        <Link onClick={() => setIsOpen(false)} to={"/"}>HOME</Link>
         <Link onClick={() => setIsOpen(false)} to={"/Search"}><FaSearch /></Link>
         <Link onClick={() => setIsOpen(false)} to={"/Cart"}><FaShoppingBag /></Link>
         {/* If user exists then show profile else login using optional chaining */}
